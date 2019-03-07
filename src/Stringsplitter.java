@@ -9,6 +9,7 @@ public class Stringsplitter {
 
     double d1;
     double d2;
+    Double dres;
     String result = "";
 
     public String calculateExpression(String expression){
@@ -42,20 +43,30 @@ public class Stringsplitter {
                 d2 = p.parseToDouble(a.get(2));
 
                 switch (s){
-                    case "+": calc.add(d1,d2);
-                    case "-": calc.subtract(d1,d2);
-                    case "*": calc.multiply(d1,d2);
-                    case "/": calc.divide(d1,d2);
-                    case "%": calc.modulo(d1,d2);
+                    case "+":
+                        calc.add(d1,d2);
+                        break;
+                    case "-":
+                        calc.subtract(d1,d2);
+                        break;
+                    case "*":
+                        calc.multiply(d1,d2);
+                        break;
+                    case "/":
+                        calc.divide(d1,d2);
+                        break;
+                    case "%":
+                        calc.modulo(d1,d2);
+                        break;
                 }
 
                 for (int x = 0; x < 3; x++){
                     a.remove(0);
                 }
+
                 result = p.parseToString(calc.res);
                 a.add(0,result);
             }
-
         }
 
         return result;

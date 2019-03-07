@@ -11,7 +11,6 @@ public class Parsing {
 
     public String parseToString(double d){
         s = String.valueOf(d);
-        System.out.println(s);
         return s;
     }
 
