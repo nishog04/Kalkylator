@@ -1,21 +1,17 @@
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.StringTokenizer;
+import static org.junit.Assert.assertEquals;
 
 
 public class StringsplitterTest {
 
     @Test
-    public void calculateExpression() {
-        // Arrange
+    public void calculateExpression(){
 
-        // Act
+        Stringsplitter sp = new Stringsplitter(); // Arrange
 
-        // Assert
+        String actual = sp.calculateExpression("5+6/2*2"); // Act
 
-
-
-
+        assertEquals(actual,"11.0"); // Assert
     }
 }

@@ -9,14 +9,12 @@ public class Stringsplitter {
 
     double d1;
     double d2;
-    Double dres;
     String result = "";
 
     public String calculateExpression(String expression){
 
         // Här lagras den emottagna strängen i form av tokens. Sifferkombinationer
         // och operatorer var för sig.
-
 
         StringTokenizer st = new StringTokenizer(expression, "+*/%-", true);
 
@@ -28,7 +26,7 @@ public class Stringsplitter {
         // While-loop tills enbart ett element återstår i listan.
 
         while (a.size() > 1){
-            String s = a.get(1).trim(); // Operatorn som switch-satsen "läser av"
+            String s = a.get(1); // Operatorn som switch-satsen "läser av"
 
             if (s.equals("+") || s.equals("-") || s.equals("*") || s.equals("/") || s.equals("%")){
                 d1 = p.parseToDouble(a.get(0)); // index[0] parsas till double
@@ -59,7 +57,11 @@ public class Stringsplitter {
                 }
 
                 result = p.parseToString(calc.res); // double-resultatet parsas om till en sträng
-                a.add(0,result); // lägges in i listan som index[0]
+                a.add(0,result); // läggs in i listan som index[0]
+            }
+            else {
+                System.out.println("Felaktig inmatning!");
+                break;
             }
         }
 
