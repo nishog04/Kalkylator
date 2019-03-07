@@ -9,7 +9,7 @@ public class calculatorTest {
 
     @Test
     public void add(){
-        double actual = calc.add(1.1d,2.2d);  // Act
+        double actual = calc.add(1.1,2.2);  // Act
         assertEquals(3.3d,actual,0.111);        // Assert
     }
 

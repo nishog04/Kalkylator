@@ -14,12 +14,9 @@ public class Stringsplitter {
 
     public String calculateExpression(String expression){
 
-        /*
-        *
-        *   Här lagras den emottagna strängen i form av tokens. Sifferkombinationer
-        *   och operatorer var för sig.
-        *
-        */
+        // Här lagras den emottagna strängen i form av tokens. Sifferkombinationer
+        // och operatorer var för sig.
+
 
         StringTokenizer st = new StringTokenizer(expression, "+*/%-", true);
 
@@ -27,20 +24,15 @@ public class Stringsplitter {
             a.add(st.nextToken());
         }
 
-        /*
-        *
-        *   Undersöker vilken typ av operator som lagrats i index 1 (alltså token 2).
-        *   Därefter körs en while-loop tills arraylistan enbart innehåller ett
-        *   enda element (resultatet av uträkningen/uträkningarna).
-        *
-        */
+
+        // While-loop tills enbart ett element återstår i listan.
 
         while (a.size() > 1){
-            String s = a.get(1).trim();
+            String s = a.get(1).trim(); // Operatorn som switch-satsen "läser av"
 
             if (s.equals("+") || s.equals("-") || s.equals("*") || s.equals("/") || s.equals("%")){
-                d1 = p.parseToDouble(a.get(0));
-                d2 = p.parseToDouble(a.get(2));
+                d1 = p.parseToDouble(a.get(0)); // index[0] parsas till double
+                d2 = p.parseToDouble(a.get(2)); // index[2] parsas till double
 
                 switch (s){
                     case "+":
@@ -60,12 +52,14 @@ public class Stringsplitter {
                         break;
                 }
 
+                // for-loop som raderar listans tre första index
+
                 for (int x = 0; x < 3; x++){
                     a.remove(0);
                 }
 
-                result = p.parseToString(calc.res);
-                a.add(0,result);
+                result = p.parseToString(calc.res); // double-resultatet parsas om till en sträng
+                a.add(0,result); // lägges in i listan som index[0]
             }
         }
 

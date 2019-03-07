@@ -3,13 +3,8 @@ public class Calculator {
 
     double res;
 
-    /*
-    *
-    *   Metoderna nedan tar emot två stängvärden och gör om dessa till doubles.
-    *   Efter det utförs aktuell kalkyl och sedan görs double-resultatet
-    *   om till ett strängvärde, som i sin tur returneras.
-    *
-    */
+    // Metoderna nedan tar emot två double-värden, gör kalkylen och returnerar en double.
+
 
     public Double add(double d1, double d2){
         res = d1+d2;
