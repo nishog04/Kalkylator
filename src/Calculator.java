@@ -1,9 +1,7 @@
 public class Calculator {
 
-    double d1;
-    double d2;
-    double dres;
-    String res = "";
+
+    double res;
 
     /*
     *
@@ -13,48 +11,31 @@ public class Calculator {
     *
     */
 
-    public String add(String s1, String s2){
-        d1 = Double.parseDouble(s1);
-        d2 = Double.parseDouble(s2);
-        dres = d1+d2;
-        res = dres+"";
+    public Double add(double d1, double d2){
+        res = d1+d2;
         return res;
     }
 
-    public String subtract(String s1, String s2){
-        d1 = Double.parseDouble(s1);
-        d2 = Double.parseDouble(s2);
-        dres = d1-d2;
-        res = dres+"";
+    public Double subtract(double d1, double d2){
+        res = d1-d2;
         return res;
     }
 
-    public String multiply(String s1, String s2){
-        d1 = Double.parseDouble(s1);
-        d2 = Double.parseDouble(s2);
-        dres = d1*d2;
-        res = dres+"";
+    public Double multiply(double d1, double d2){
+        res = d1*d2;
         return res;
     }
 
-    public String divide(String s1, String s2){
-        d1 = Double.parseDouble(s1);
-        d2 = Double.parseDouble(s2);
-
-        if (d2 == 0.0){     // Kontrollerar om användaren dividerar med 0
+    public Double divide(double d1, double d2){
+        if (d2 == 0.0){
             throw new ArithmeticException("Det går inte att dividera med 0!");
         }
-
-        dres = d1/d2;
-        res = dres+"";
+        res = d1/d2;
         return res;
     }
 
-    public String modulo(String s1, String s2){
-        d1 = Double.parseDouble(s1);
-        d2 = Double.parseDouble(s2);
-        dres = d1%d2;
-        res = dres+"";
+    public Double modulo(double d1, double d2){
+        res = d1%d2;
         return res;
     }
 }
