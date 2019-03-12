@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 public class ParsingTest {
 
-    Parsing p = new Parsing(); // Arrenge
+    Parsing p = new Parsing(); // Arrange
 
     @Test
     public void parseToDouble() {

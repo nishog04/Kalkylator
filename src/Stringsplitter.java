@@ -11,6 +11,9 @@ public class Stringsplitter {
     double d2;
     String result = "";
 
+
+    //Denna metod tar emot en sträng och returnerar en sträng
+
     public String calculateExpression(String expression){
 
         // Här lagras den emottagna strängen i form av tokens. Sifferkombinationer
@@ -50,7 +53,7 @@ public class Stringsplitter {
                         break;
                 }
 
-                // for-loop som raderar listans tre första index
+                // for-loop som raderar listans tre första indexpositioner
 
                 for (int x = 0; x < 3; x++){
                     a.remove(0);
