@@ -27,7 +27,7 @@ public class calculatorTest {
     @Test
     public void multiplyByZero(){  // Testar multiplicera med 0
         double actual = calc.multiply(5,0); // Act
-        assertEquals(actual,0.0,0.111);   // Assert
+        assertEquals(0.0,actual,0.111);   // Assert
     }
 
     @Test
