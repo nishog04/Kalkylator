@@ -50,4 +50,18 @@ public class StringsplitterTest {
 
         assertEquals(actual, ""); // Assert
     }
+
+    /*
+    * Miniräknaren klarar naturligtvis inte av bokstäver. I testet nedan försöker användaren skriva in
+    * ordet "Hej", vilket resulterar i att programmet avslutas.
+     */
+
+    @Test
+    public void CalculateExpressionWithLetters(){
+        Stringsplitter sp = new Stringsplitter();  // Arrange
+
+        String actual = sp.calculateExpression("Hej");  // Act
+
+        assertEquals(actual,"");  // Assert
+    }
 }
